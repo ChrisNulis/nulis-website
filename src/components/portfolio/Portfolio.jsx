@@ -34,7 +34,7 @@ export default function Portfolio() {
   ];
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portolio</h1>
+      <h1>Portfolio</h1>
       <ul>
           {list.map((item)=>(
             <PortfolioList
@@ -46,6 +46,26 @@ export default function Portfolio() {
           ))}
       </ul>
       <div className="container">
+        <div className="item">
+          <img src="assets/Project1.png" alt=""/>
+          <h3>Unit Project 1 App</h3>
+        </div>
+        <div className="item">
+          <img src="assets/Project1.png" alt=""/>
+          <h3>Unit Project 1 App</h3>
+        </div>
+        <div className="item">
+          <img src="assets/Project1.png" alt=""/>
+          <h3>Unit Project 1 App</h3>
+        </div>
+        <div className="item">
+          <img src="assets/Project1.png" alt=""/>
+          <h3>Unit Project 1 App</h3>
+        </div>
+        <div className="item">
+          <img src="assets/Project1.png" alt=""/>
+          <h3>Unit Project 1 App</h3>
+        </div>
         <div className="item">
           <img src="assets/Project1.png" alt=""/>
           <h3>Unit Project 1 App</h3>
