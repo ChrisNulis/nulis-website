@@ -2,36 +2,58 @@ import React from 'react'
 import "./portfolio.scss"
 import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
+import { featuredPortfolio, webPortfolio, mobilePortfolio, designPortfolio, contentPortfolio } from "../../data";
 
 export default function Portfolio() {
-    const[selected, setSelected] = useState("project1")
+    const[selected, setSelected] = useState("featured")
+    const[data, setData] = useState([]);
 
   const list =[
     {
-      id: "project1",
-      title: "Project 1",
+      id: "featured",
+      title: "Featured",
     },
     {
-      id: "project2",
-      title: "Project 2",
+      id: "web",
+      title: "Web",
     },
     {
-      id: "project3",
-      title: "Project 3",
+      id: "mobile",
+      title: "Mobile",
     },
     {
-      id: "project4",
-      title: "Project 4",
+      id: "design",
+      title: "Design",
     },
     {
-      id: "project5",
-      title: "Project 5",
-    },
-    {
-      id: "project6",
-      title: "Project 6",
+      id: "content",
+      title: "Content",
     },
   ];
+
+  useEffect(() => {
+
+    switch(selected){
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+      default:
+        setData(featuredPortfolio);
+    }
+  },[selected])
+
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
