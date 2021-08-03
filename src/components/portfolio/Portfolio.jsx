@@ -37,17 +37,17 @@ export default function Portfolio() {
       case "featured":
         setData(featuredPortfolio);
         break;
-      case "featured":
-        setData(featuredPortfolio);
+      case "web":
+        setData(webPortfolio);
         break;
-      case "featured":
-        setData(featuredPortfolio);
+      case "mobile":
+        setData(mobilePortfolio);
         break;
-      case "featured":
-        setData(featuredPortfolio);
+      case "design":
+        setData(designPortfolio);
         break;
-      case "featured":
-        setData(featuredPortfolio);
+      case "content":
+        setData(contentPortfolio);
         break;
       default:
         setData(featuredPortfolio);
@@ -68,33 +68,16 @@ export default function Portfolio() {
           ))}
       </ul>
       <div className="container">
-        <div className="item">
-          <img src="assets/Project1.png" alt=""/>
-          <h3>Unit Project 1 App</h3>
-        </div>
-        <div className="item">
-          <img src="assets/Project1.png" alt=""/>
-          <h3>Unit Project 1 App</h3>
-        </div>
-        <div className="item">
-          <img src="assets/Project1.png" alt=""/>
-          <h3>Unit Project 1 App</h3>
-        </div>
-        <div className="item">
-          <img src="assets/Project1.png" alt=""/>
-          <h3>Unit Project 1 App</h3>
-        </div>
-        <div className="item">
-          <img src="assets/Project1.png" alt=""/>
-          <h3>Unit Project 1 App</h3>
-        </div>
-        <div className="item">
-          <img src="assets/Project1.png" alt=""/>
-          <h3>Unit Project 1 App</h3>
-        </div>
+        {data.map((d) => (
+          <div className="item">
+            <img src={d.img}
+            alt=""
+            />
+          <h3>{d.title}</h3>
+          </div>
+        ))}
       </div>
-
-
     </div>
-  )
+
+  );
 }
